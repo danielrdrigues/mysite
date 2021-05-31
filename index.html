@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Daniel Rodrigues</title>
+<link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8">
+<script src="https://unpkg.com/freezeframe/dist/freezeframe.min.js"></script>
+</head>
+<style type="text/css" media="screen">
+    :root { 
+        --green-text: #2f2;
+        --background: black;
+        --lighter-bg: rgb(1, 19, 3);
+        --font-color: white;
+        --clickedColor: #69b919;
+    }
+    
+    h1, h2, h4 { color: var(--green-text); } 
+    p { color: var(--font-color); } 
+
+    body {
+        width: 35em;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+		background-color: var(--background);
+    }
+
+    ul { 
+        display: inline-flex;
+        text-decoration: none;
+        list-style-type: none;
+    }
+
+    li { 
+        padding-right: 10px;
+    }
+
+    a { color: var(--green-text) }
+
+    .footer { 
+        margin-top: 95%
+    }
+    
+    .peepoclap { 
+        width: 20px;
+    }
+
+    .content { 
+        background-color: var(--lighter-bg);
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .smallFont { font-size: 10px; }
+
+    .descLink { margin-top: 0; margin-bottom: 0; }
+
+    .descTop {  margin-bottom: 0;  }
+
+    .youtube > img { 
+        display: block;
+        width: 50px;
+    }
+
+    .thumbs {
+        border-radius: 50%;
+    }
+
+    footer > a, p { 
+        display: inline;
+    }
+
+    #sapin { 
+        width: 200px;
+    }
+    .ff-inactive {
+        width: 200px !important;
+    }
+
+</style>
+
+<body>
+<img id="sapin" style="width:200px" src="img/sapin.gif">
+<h1>Daniel R;</h1>
+<h2>Coming soon...</h2>
+<p>Estou ocupado trabalhando em outros projetos e ainda não tive tempo de adicionar algo aqui, assim que tiver tempo vou colocar umas coisas legais, ssl nessa porra, coisas de lammer/scriptkid, etc.</p>
+    <ul> 
+        <li><a class="a-github" href="https://github.com/danielrdrigues">Github</a></li>
+        <li><a class="a-sktcity" href="https://www.sktcity.com.br">SKT</a></li>
+        <li><a onclick="aboutClick(event)" class="a-about abas" href="">Sobre</a></li>
+        <li><a onclick="linksClick(event)" class="a-links abas"  href="">Links</a></li>
+        <li><a onclick="siteClick(event)" class="a-site abas"  href="">Site</a></li>
+        <li><a onclick="youTube(event)" class="a-youtube abas"  href="">Youtube</a></li>  
+    </ul>
+
+    <div class="aboutMe content" hidden>
+        <h2>Sobre</h2>
+        <p class="descTop">
+            Fui estudante de análise de sistemas, não concluí o curso, estou trabalhando de Programador Júnior no momento, e com projeto paralelo (SKT), que ocupa a maioria do meu tempo. 
+            Pretendo voltar a falculdade somente por pressão familiar e ganhar um diploma pra ter cela diferenciada e facilidar a imigração
+        </p>
+        <a onclick="aboutClick(event)" class="smallFont">clique novamente para esconder...<img class="peepoclap" src="img/peepoclap.gif"></a>
+        
+    </div>
+
+
+    <div class="links content" hidden>
+        <h2>Links</h2>
+        <p class="descTop"> 
+          Aqui uma seleção de links que podem ser úteis para você, ao contrário da experiência de visitar esse site: <br><br>
+
+            <a href="https://awesomeopensource.com/">awesomeopensource.com</a> 
+            <p class="smallFont descLink">esse é ótimo, encontrei recentemente, tem de tudo, só precisa saber um pouco de inglês :P</p>
+
+            <h4>Cursos</h4>
+            <p>PT</p><br>
+            <a href="https://scrimba.com/allcourses">Scrimba</a>
+            <p class="smallFont descLink">Tem opção de filtrar os cursos grátis</p><br>
+            <a href="https://khanacademy.org">Khan Academy</a>
+            <p class="smallFont descLink">Khan Academy tem versão português, prefiro usar a inglês, mas você pode usar a pt</p>
+            <br><br>
+            <p>EN</p><br>
+            <a href="https://cs50.harvard.edu/college/2021/spring/">CS50 Harvard</a><br>
+            <a href="https://www.freecodecamp.org/">freeCodeCamp</a><br>
+          
+            <h4>IDEs / Compiladores</h4>
+            <a href="https://repl.it">repl.it</a><br>
+            <a href="https://colab.research.google.com/">Colab research</a>
+            <p class="smallFont descLink">Ambiente online do google que dá pra fazer pair programming em Python</p>
+            <h4>Outros</h4>
+            <a href="https://github.com/danielrdrigues/linksuteis">Lista de links</a>
+            
+            
+        </p>
+        <br>
+        <a onclick="linksClick(event)" class="smallFont">clique novamente para esconder...<img class="peepoclap" src="img/peepoclap.gif"></a>
+        
+    </div>
+
+    <div class="site content" hidden>
+        <h2>Sobre o site</h2>
+        <p class="descTop"> 
+            Estou desenvolvendo o site em javascript puro, para validar meu conhecimento no mesmo, assim que eu tiver tempo depois de estudar um 
+            framework modinha, eu vou colocar outras versões do site, mas irei manter essa velha de qualquer jeito, como é estático, eu não preciso me preocupar, a tia amazon hospeda pra mim.
+            Só espero que ela não me mande a conta em dólares, a princípio eu acho que é de graça kkkkk...
+            <br><br>
+            Esse site vai servir de repositório para mim também, então vou atualizar ele para uso pessoal, e qualquer um que tiver acesso ao link poderá usufruir. 
+            Open-source também, vide: <a href="/mysaitehttps://github.com/danielrdrigues/mysaite/tree/master">https://github.com/danielrdrigues/mysaite</a>
+        </p>
+        <a onclick="siteClick(event)" class="smallFont">clique novamente para esconder...<img class="peepoclap" src="img/peepoclap.gif"></a>
+        
+    </div>
+
+    <div class="youtube content" hidden>
+        <h2>Canais youtube</h2>
+        <p>Uma seleção de canais fodas do youtube que você pode seguir para aprender mais: </p><br><br>
+        <h4>PT</h4>
+        <img class="thumbs" src="img/youtube/universoprogramado.jpg">
+        <a href="https://www.youtube.com/results?search_query=universo+programado" class="descTop">Universo Programado</a>
+        <p class="smallFont descLink">Vídeos sobre IA, explicado e open-source ❤</p>
+        <br>
+        <img class="thumbs" src="img/youtube/gabrielpato.jpg">
+        <a href="https://www.youtube.com/results?search_query=gabriel+pato" class="descTop">Gabriel Pato</a>
+        <p class="smallFont descLink">Canal que fala sobre hacking e tecnologia, tem parte técnica, mas é mais voltado para mainstream.</p>
+        <br> 
+
+        <img class="thumbs" src="img/youtube/filipedeschamps.jpg">
+        <a href="https://www.youtube.com/results?search_query=filipe+deschamps" class="descTop">Filipe Deschamps</a>
+        <p class="smallFont descLink">Vídeos de programação em geral, é ótimo pra conhecer outros canais e ter uma perspectiva.</p>
+        <br> 
+        <img class="thumbs" src="img/youtube/manualdocodigo.jpg">
+        <a href="https://www.youtube.com/results?search_query=manual+do+codigo" class="descTop">Manual do Código</a>
+        <p class="smallFont descLink">Canal com conteúdo técnico de programação com tutoriais</p>
+        <br>
+        <img class="thumbs" src="img/youtube/rocketseat.jpg">
+        <a href="https://www.youtube.com/results?search_query=rocket+seat" class="descTop">Rocket Seat</a>
+        <p class="smallFont descLink">Vídeo/comunidade para aprender aquele framework modinha :p</p>
+        <br>
+
+        <h4>EN</h4>
+        <img class="thumbs" src="img/youtube/liveoverflow.jpg">
+        <a href="https://www.youtube.com/results?search_query=live+overflow" class="descTop">Live Overflow</a>
+        <p class="smallFont descLink">Canal hacking e write ups</p>
+        <br>
+        <img class="thumbs" src="img/youtube/computerphile.jpg">
+        <a href="https://www.youtube.com/results?search_query=computerphile" class="descTop">Computerphile</a>
+        <p class="smallFont descLink">Canal entrevistas sobre assunto programação e afins.</p>
+        <br>
+        <img class="thumbs" src="img/youtube/dapperdino.jpg">
+        <a href="https://www.youtube.com/results?search_query=Dapper+dino" class="descTop">Dapper Dino</a>
+        <p class="smallFont descLink">Canal de tutoriais em geral</p>
+        <br>
+        <img class="thumbs" src="img/youtube/3blue1brown.jpg">
+        <a href="https://www.youtube.com/results?search_query=3blue1brown" class="descTop">3Blue1Brown</a>
+        <p class="smallFont descLink">Canal mais para matemática e exercícios</p>
+        <br>
+
+        <a onclick="youTube(event)" class="smallFont">clique novamente para esconder...<img class="peepoclap" src="img/peepoclap.gif"></a>
+        
+    </div>
+
+
+
+
+    <div class="footer">
+        <a href="mailto:danrdrigues@gmail.com">Contato: danrdrigues@gmail.com</a>
+        <p>;    </p>
+        <p>Discord: DRodrigues#0001 ;</p>
+        <br>
+        / parabéns você me achou, pegue seu prêmio em danielrodrigu.es/img/premio.jpg
+    </div>
+</body>
+
+<script> 
+    var aboutClickHidden = true;
+    var aboutLinkHidden = true;
+    var siteClickHidden = true;
+    var youtubeClickHidden = true;
+    var clickedColor = getComputedStyle(document.documentElement).getPropertyValue('--clickedColor');
+    var notClickedColor = getComputedStyle(document.documentElement).getPropertyValue('--green-text');
+    isMoving = 0; 
+    
+    
+    const logo = new Freezeframe(document.getElementById("sapin"), {
+     trigger: false,
+    
+    });
+    
+   
+ 
+
+    document.onmousemove = function () {
+        if(isMoving == 0) {
+            logo.start();
+            isMoving = 1;
+            timeout = setTimeout(function(){logo.stop(); isMoving = 0}, 1000);
+        
+        }
+    }
+
+    function hideAll() { 
+        var abas = document.getElementsByClassName("abas")
+        for(var x=0; x < abas.length; x++){
+            document.getElementsByClassName("abas")[x].style.color = notClickedColor;
+        }
+    
+        document.getElementsByClassName("aboutMe")[0].hidden = true;
+        document.getElementsByClassName("links")[0].hidden = true;
+        document.getElementsByClassName("site")[0].hidden = true;
+        document.getElementsByClassName("youtube")[0].hidden = true;
+    }
+    
+    function aboutClick(event) {
+        event.preventDefault();
+        if(aboutClickHidden){
+            hideAll();
+            document.getElementsByClassName("aboutMe")[0].hidden = false;
+            aboutClickHidden = false;
+            document.getElementsByClassName("a-about")[0].style.color = clickedColor;
+        }
+        else { 
+            document.getElementsByClassName("aboutMe")[0].hidden = true;
+            aboutClickHidden = true;
+            document.getElementsByClassName("a-about")[0].style.color = notClickedColor;
+        }
+    }
+    function linksClick(event) {
+        event.preventDefault();
+        if(aboutLinkHidden){
+            hideAll();
+            document.getElementsByClassName("links")[0].hidden = false;
+            aboutLinkHidden = false;
+            document.getElementsByClassName("a-links")[0].style.color = clickedColor;
+        }
+        else { 
+            document.getElementsByClassName("links")[0].hidden = true;
+            aboutLinkHidden = true;
+            document.getElementsByClassName("a-links")[0].style.color = notClickedColor;
+        }
+    }
+    function siteClick(event){ 
+        event.preventDefault();
+        if(siteClickHidden){
+            hideAll();
+            document.getElementsByClassName("site")[0].hidden = false;
+            siteClickHidden = false;
+            document.getElementsByClassName("a-site")[0].style.color = clickedColor;
+        }
+        else { 
+            hideAll();
+            document.getElementsByClassName("site")[0].hidden = true;
+            siteClickHidden = true;
+            document.getElementsByClassName("a-site")[0].style.color = notClickedColor;
+        }
+    }
+    function youTube(event){ 
+        event.preventDefault();
+        if(youtubeClickHidden){
+            hideAll();
+            document.getElementsByClassName("youtube")[0].hidden = false;
+            youtubeClickHidden = false;
+            document.getElementsByClassName("a-youtube")[0].style.color = clickedColor;
+        }
+        else { 
+            document.getElementsByClassName("youtube")[0].hidden = true;
+            youtubeClickHidden = true;
+            document.getElementsByClassName("a-youtube")[0].style.color = notClickedColor;
+        }
+    }
+
+</script> 
+
+</html>
