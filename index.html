@@ -13,23 +13,24 @@
 <link href="index.css" rel="stylesheet">
 
 <body>
+<div id="body-container">
 <img id="sapin" style="width:200px" src="img/peepopoop.png">
 <h1>Daniel R;</h1>
 <p>Bem-vindo(a) a minha página, o intuito da mesma é adicionar recursos/ferramentas, gambiarras e explorar diversas techs, tudo isso com uma estética duvidosa, com o tempo vou adicionando coisas novas, o front estará no meu <a class="a-github" href="https://github.com/danielrdrigues/mysaite">github</a></p>
     <ul id="nav">
-        <li><a class="a-github" href="https://github.com/danielrdrigues">Github⤴</a></li>
-        <li><a class="a-sktcity" href="https://www.sktcity.com.br">SKT⤴</a></li>
+        <!-- <li><a class="a-sktcity" href="https://www.sktcity.com.br">SKT⤴</a></li> -->
         <li><a onclick="itemClick(event, 'navAbout')" class="a-about abas" href="">Sobre</a></li>
         <li><a onclick="itemClick(event, 'navLinks')" class="a-links abas"  href="">Links</a></li>
         <li><a onclick="itemClick(event, 'navSite')" class="a-site abas"  href="">Site</a></li>
         <li><a onclick="itemClick(event, 'navYoutube')" class="a-youtube abas"  href="">Youtube</a></li>
         <li><a onclick="itemClick(event, 'navSocial')" class="a-social abas" href="">Social</a></li>
+        <li><a class="a-github" href="https://github.com/danielrdrigues">Github⤴</a></li>
     </ul>
 
     <div id="navAbout" class="content">
         <h2>Sobre</h2>
         <p class="descTop">
-            Sempre gostei da área de tech, primeiros passos foi em fóruns de Tibia, lá aprendi a linguagem de scripting LUA e também ensinei um pouco entre meus 13 e 18 anos. Fui estudante de análise de sistemas, não concluí o curso, trabalhei como programador júnior em uma empresa pequena no RJ, já fiz parte de um projeto se server FiveM.
+            Sempre gostei da área de tech, primeiros passos foi em fóruns de Tibia, lá aprendi a linguagem de scripting LUA, criei servers de Tibia e também ensinei um pouco entre meus 13 e 18 anos. Fui estudante de análise de sistemas, não concluí o curso, trabalhei como programador júnior em uma empresa pequena no RJ, já tive um server FiveM.
             Pretendo voltar a falculdade pra ganhar um diploma pra ter cela diferenciada, facilidar a imigração e talvez concursar na área de tecnologia.
         </p>
 		<br>
@@ -43,24 +44,23 @@
         <p class="descTop">
           Aqui uma seleção de links que podem ser úteis para você, ao contrário da experiência de visitar esse site: <br><br>
 
-            <a href="https://awesomeopensource.com/">awesomeopensource.com</a>
-            <p class="smallFont descLink">esse é ótimo, encontrei recentemente, tem de tudo, só precisa saber um pouco de inglês :P</p>
+            <a href="https://awesomeopensource.com/">awesomeopensource.com</a><p class="smallFont descLink"> - Esse é ótimo, encontrei recentemente, tem de tudo, só precisa saber um pouco de inglês :P</p>
 
             <h4>Cursos</h4>
             <p>PT</p><br>
             <a href="https://scrimba.com/allcourses">Scrimba</a>
-            <p class="smallFont descLink">Tem opção de filtrar os cursos grátis</p><br>
-            <a href="https://khanacademy.org">Khan Academy</a>
-            <p class="smallFont descLink">Khan Academy tem versão português, prefiro usar a inglês, mas você pode usar a pt</p>
+            <p class="smallFont descLink"> - Tem opção de filtrar os cursos grátis</p><br>
+            <a href="https://khanacademy.org">Khan Academy</a><p class="smallFont descLink"> - Khan Academy tem versão português, prefiro usar a inglês, mas você pode usar a pt</p>
             <br><br>
             <p>EN</p><br>
             <a href="https://cs50.harvard.edu/college/2021/spring/">CS50 Harvard</a><br>
             <a href="https://www.freecodecamp.org/">freeCodeCamp</a><br>
-
+            <a href="https://www.w3schools.com/">W<sup>3</sup>schools</a><p class="smallFont descLink"> - Wiki/Cursos, site muito bom para referencias e aprender diversas coisas.</p>
+            <br>
             <h4>IDEs / Compiladores</h4>
             <a href="https://repl.it">repl.it</a><br>
-            <a href="https://colab.research.google.com/">Colab research</a>
-            <p class="smallFont descLink">Ambiente online do google que dá pra fazer pair programming em Python</p>
+            <a href="https://codepen.io/">codepen.io</a><br>
+            <a href="https://colab.research.google.com/">Colab research</a> <p class="smallFont descLink"> - Ambiente online do google que dá pra fazer pair programming em Python</p>
             <h4>Outros</h4>
             <a href="https://github.com/danielrdrigues/linksuteis">Lista de links</a>
 
@@ -87,8 +87,7 @@
 
     <div id="navYoutube" class="content">
         <h2>Canais youtube</h2>
-        <p>Uma seleção de canais fodas do youtube que você pode seguir para aprender mais: </p><br><br>
-        <h4>PT</h4>
+        <p>Uma seleção de canais fodas do youtube que você pode seguir para aprender mais, cada vez que o site é carregado a ordem de aparição muda</p><br><br>
         <div id="youtube-nav"></div>
 
         <a onclick="hideContent()" class="smallFont">clique novamente para esconder...<img class="peepoclap" src="img/peepoclap.gif"></a>
@@ -130,6 +129,7 @@
         <br>
         / parabéns você me achou, pegue seu prêmio em danielrodrigu.es/img/premio.jpg
     </div>
+</div>
 </body>
 
 <script>

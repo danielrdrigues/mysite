@@ -10,20 +10,25 @@ h1, h2, h4 { color: var(--green-text); }
 p { color: var(--font-color); }
 
 body {
-    width: 35em;
-    margin: 0 auto;
+    width: 98vw;
     font-family: Tahoma, Verdana, Arial, sans-serif;
     background-color: var(--background);
+    text-align: -webkit-center;
+    text-align: -moz-center;
+}
+
+#body-container { 
+    width: 25vw;  
 }
 
 ul {
-   
     text-decoration: none;
     list-style-type: none;
 }
 
 #nav { 
-    display: inline-flex;
+    display: -webkit-box;
+    width: fit-content;
 }
 
 li {
