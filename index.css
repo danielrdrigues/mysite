@@ -17,9 +17,13 @@ body {
 }
 
 ul {
-    display: inline-flex;
+   
     text-decoration: none;
     list-style-type: none;
+}
+
+#nav { 
+    display: inline-flex;
 }
 
 li {
@@ -37,6 +41,7 @@ a { color: var(--green-text) }
 }
 
 .content {
+    display: none;
     background-color: var(--lighter-bg);
     padding: 5px;
     margin: 5px;
@@ -62,10 +67,12 @@ footer > a, p {
 }
 
 #sapin {
+    margin-top: 10%;
     width: 200px;
 }
 .ff-inactive {
     width: 200px !important;
 }
 yellow { color: yellow }
+white { color: white }
 
