@@ -15,6 +15,10 @@ body {
     background-color: var(--background);
     text-align: -webkit-center;
     text-align: -moz-center;
+    background: url(img/matrix2.png);
+    background-repeat: repeat-x;
+    background-size: auto;
+    background-color: black;
 }
 
 #body-container { 
@@ -24,6 +28,7 @@ body {
 ul {
     text-decoration: none;
     list-style-type: none;
+    display: block;
 }
 
 #nav { 
@@ -33,6 +38,11 @@ ul {
 
 li {
     padding-right: 10px;
+    display: inline;
+}
+
+#socialList > li { 
+    display: block;
 }
 
 a { color: var(--green-text) }
