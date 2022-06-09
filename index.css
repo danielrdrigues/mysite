@@ -22,7 +22,8 @@ body {
 }
 
 #body-container { 
-    width: 40vw;  
+    width: 40vw;
+    max-width: 900px;
 }
 
 ul {
