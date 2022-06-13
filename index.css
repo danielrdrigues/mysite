@@ -23,7 +23,7 @@ body {
 
 #body-container { 
     width: 40vw;
-    max-width: 900px;
+    min-width: 700px;
 }
 
 ul {
