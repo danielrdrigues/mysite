@@ -10,7 +10,8 @@ h1, h2, h4 { color: var(--green-text); }
 p { color: var(--font-color); }
 
 body {
-    width: 98vw;
+    overflow-x: hidden;
+    width: 101vw;
     font-family: Tahoma, Verdana, Arial, sans-serif;
     background-color: var(--background);
     text-align: -webkit-center;
