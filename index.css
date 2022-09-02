@@ -10,6 +10,7 @@ h1, h2, h4 { color: var(--green-text); }
 p { color: var(--font-color); }
 
 body {
+    margin: 0;
     overflow-x: hidden;
     width: 101vw;
     font-family: Tahoma, Verdana, Arial, sans-serif;
