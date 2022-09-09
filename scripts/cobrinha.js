@@ -37,7 +37,7 @@ function drawCanva() {
     snake.snakeBody = rect(snake.posX, snake.posY, 30, 20, 0);
    // re1 = rect(snake.posX, snake.posY, 30, 20, 0);
    clear()
-   background(220)
+   background("#2f2")
     // fill("black");
     // re2 = rect(200, 300, 55, 55, 20, 20, 10, 5);
     // re2.color("black");
@@ -89,7 +89,7 @@ document.addEventListener('keydown', (e) => {
         break;
     case "Delete":
         clear();
-        background(220);
+        background("#2f2");
         console.log("clearingClean")
         break;
     }
