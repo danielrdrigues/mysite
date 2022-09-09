@@ -119,7 +119,7 @@ white { color: white }
     /* background-color: rgb(75 21 21 / 55%); */
     top: 0;
     width: 100%;
-    height: 800px;
+    height: auto;
     /* transform: translate(-50%, -50%); */
 
     /* left: calc(100% - var(--sCanvaWidth)/2 ); */

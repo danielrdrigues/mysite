@@ -17,8 +17,13 @@ var Game = {
     "isPaused": 0
 }
 
+var Field = { 
+    "x": 900,
+    "y": 700
+}
+
 function setup() {
-    var snakeCanva = createCanvas(900, 700);
+    var snakeCanva = createCanvas(Field.x, Field.y);
     snakeCanva.parent("snakeCanvaContainer").id("snakeCanva");
 
 }
@@ -39,7 +44,7 @@ function drawCanva() {
     Snake.snakeBody = rect(Snake.posX, Snake.posY, 30, 20, 0);
    // re1 = rect(snake.posX, snake.posY, 30, 20, 0);
    clear()
-   background("#2f2")
+   background("rgb(28, 46, 2)")
     // fill("black");
     // re2 = rect(200, 300, 55, 55, 20, 20, 10, 5);
     // re2.color("black");
@@ -54,15 +59,27 @@ function gameLoop(){
     switch(Snake.dir) {
         case "U":
             Snake.posY -= 10;
+            if(Snake.posY < -10){ 
+                Snake.posY = Field.y;
+            }
             break;    
         case "D":
             Snake.posY += 10;
+            if(Snake.posY > Field.y){ 
+                Snake.posY = -10;
+            }
             break;
         case "L":
             Snake.posX -= 10;
+            if(Snake.posX < -10){ 
+                Snake.posX = Field.x;
+            }
             break;
         case "R":
             Snake.posX += 10;
+            if(Snake.posX > Field.x){ 
+                Snake.posX = -10;
+            }
             break;
     }
      $("#snakeX")[0].innerText = Snake.posX;
