@@ -1,9 +1,6 @@
 
 
 
-const click = new Event("click");
-const button = document.getElementById("navJogos");
-button.dispatchEvent(click);
 var canvas = { 
     
 }
