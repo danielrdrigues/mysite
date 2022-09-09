@@ -70,6 +70,12 @@ var youtubeCreators = {
         "link": "https://www.youtube.com/results?search_query=3blue1brown",
         "img": "img/youtube/3blue1brown.jpg",
         "desc": "Canal mais para matemática e exercícios"
+    },
+    "13": {
+        "name": "Fireship (us)",
+        "link": "https://www.youtube.com/results?search_query=fireship",
+        "img": "img/youtube/fireship.jpg",
+        "desc": "Tutoriais geralmente resumidos de programação e showcase de linguagens e ferramentas"
     }
 }
 
