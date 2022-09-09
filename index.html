@@ -2,11 +2,13 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="description" content="Site pessoal de DanielRodrigu.es">
+    <meta name="description" content="Site pessoal de DanielRodrigu.es, gambiarras, portfólio, redes...">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
     <meta name="keywords" content="Programador, Javascript, Site pessoal, Ferramentas, Jogos, Brasileiro, Daniel, Rodrigues">
     <meta name="author" content="Daniel Rodrigues">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta property="og:image" content="/img/peepopoop.png">
+    <meta property="og:description" content="Site pessoal de DanielRodrigu.es, gambiarras, portfólio, redes...">
     <title>Daniel Rodrigues</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
     <script src="scripts/index.js"></script>
@@ -113,17 +115,17 @@
             <a onclick="hideContent()" class="smallFont">clique novamente para esconder...<img class="peepoclap" src="img/peepoclap.gif"></a>
         </div>
         
-        <div id="navJogos" class="content">
+        <div id="navJogos" class="content indexContent">
             <div id="snakeGame">
         
 
                 
                 <div id="snakeCanvaContainer"></div>
                 <div id="snakeDebug">
-                    Snake X, Y: <label id="snakeX"></label><label id="snakeY"></label><br>
-                    <span id="snakeArray">[1]</span><br>
-                    <button id="sLessSpeed">-</button><label id="snakeSpeed">Velocidade da cobra: </label>[<span id="snakeSpeedValue">0</span>]<button id="sPlusSpeed">+</button><br>
-                    <button id="sLessSize">-</button><label id="snakeSize">Velocidade da cobra: </label>[<span id="snakeSizeValue">0</span>]<button id="sPlusSize">+</button>
+                    <label>Snake Position: (<span id="snakeX"></span>,<span id="snakeY"></span>)</label><br>
+                    <span>Snake Size:</span><span id="snakeArray">[1]</span><br>
+                    <label id="snakeSpeedLabel">Velocidade da cobra: </label><input type="range" id="snakeSpeed" min="0" max="100"></input><br>
+                    <!-- <button id="sLessSize">-</button><label id="snakeSize">Velocidade da cobra: </label>[<span id="snakeSizeValue">0</span>]<button id="sPlusSize">+</button> -->
                 </div>
             </div>
         </div>

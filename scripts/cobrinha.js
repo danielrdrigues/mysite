@@ -1,18 +1,23 @@
 
 
+
+const click = new Event("click");
+const button = document.getElementById("navJogos");
+button.dispatchEvent(click);
 var canvas = { 
     
 }
 
-var snake = { 
+var Snake = { 
     snakeBody: null,
     "posX": 400,
     "posY": 400,
     "dir": 'R'
 }
 
-var game = { 
-    "speed": 10
+var Game = { 
+    "speed": 10,
+    "isPaused": 0
 }
 
 function setup() {
@@ -34,7 +39,7 @@ function drawRect() {
 function drawCanva() {
    
     fill("#2f2");
-    snake.snakeBody = rect(snake.posX, snake.posY, 30, 20, 0);
+    Snake.snakeBody = rect(Snake.posX, Snake.posY, 30, 20, 0);
    // re1 = rect(snake.posX, snake.posY, 30, 20, 0);
    clear()
    background("#2f2")
@@ -47,23 +52,25 @@ function drawCanva() {
 // function toLeft
 
 function gameLoop(){
-    switch(snake.dir) {
+    console.log($("#snakeSpeed").val())
+    Game.speed = $("#snakeSpeed").val()
+    switch(Snake.dir) {
         case "U":
-            snake.posY -= 10;
+            Snake.posY -= 10;
             break;    
         case "D":
-            snake.posY += 10;
+            Snake.posY += 10;
             break;
         case "L":
-            snake.posX -= 10;
+            Snake.posX -= 10;
             break;
         case "R":
-            snake.posX += 10;
+            Snake.posX += 10;
             break;
     }
-     $("#snakeX")[0].innerText = snake.posX;
-     $("#snakeY")[0].innerText = snake.posY;
-    // snake.posX += 10;
+     $("#snakeX")[0].innerText = Snake.posX;
+     $("#snakeY")[0].innerText = Snake.posY;
+    // Snake.posX += 10;
     //gameLoop();
     clear();
     const canvas = document.querySelector('#snakeCanva');
@@ -76,21 +83,21 @@ document.addEventListener('keydown', (e) => {
    console.log(e.key);
    switch(key) {
     case "ArrowUp":
-        snake.dir = 'U';
+        Snake.dir = 'U';
         break;    
     case "ArrowDown":
-        snake.dir = 'D';
+        Snake.dir = 'D';
         break;
     case "ArrowLeft":
-        snake.dir = 'L';
+        Snake.dir = 'L';
         break;
     case "ArrowRight":
-        snake.dir = 'R';
+        Snake.dir = 'R';
         break;
-    case "Delete":
-        clear();
-        background("#2f2");
-        console.log("clearingClean")
+    case "Pause":
+        console.log("pause")
+        if(Game.isPaused)
+        clearInterval(game);
         break;
     }
    e.preventDefault();
@@ -100,6 +107,11 @@ document.addEventListener('keydown', (e) => {
       //if(key)
 });
 
-setInterval(()=>gameLoop(), 1000 / game.speed)
+gameTick =  1000 / Game.speed
+
+var game = setInterval(()=> {
+    gameLoop()
+},gameTick)
+
 
 var cobra = [1]
