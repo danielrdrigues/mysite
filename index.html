@@ -23,9 +23,12 @@
 
 <body>
     <div id="body-container">
+        
+          
         <img id="sapin" style="width:200px" src="img/peepopoop.png">
+        
         <h1>Daniel R;</h1>
-        <p>Bem-vindo(a) a minha página, o intuito da mesma é adicionar recursos/ferramentas, gambiarras e explorar diversas techs, tudo isso com uma estética duvidosa, com o tempo vou adicionando coisas novas, o front estará no meu <a class="a-github" href="https://github.com/danielrdrigues/mysaite">github</a></p>
+        <p class="lang_bemvindo">Bem-vindo(a) a minha página, o intuito da mesma é adicionar recursos/ferramentas, gambiarras e explorar diversas techs, tudo isso com uma estética duvidosa, com o tempo vou adicionando coisas novas, o front estará no meu </p><a class="a-github" href="https://github.com/danielrdrigues/mysaite">github</a>
         <ul id="nav">
             <!-- <li><a class="a-sktcity" href="https://www.sktcity.com.br">SKT⤴</a></li> -->
             <li><a onclick="itemClick(event, 'navAbout')" class="a-about abas" href="">Sobre</a></li>
@@ -33,13 +36,14 @@
             <li><a onclick="itemClick(event, 'navSite')" class="a-site abas"  href="">Site</a></li>
             <li><a onclick="itemClick(event, 'navYoutube')" class="a-youtube abas"  href="">Youtube</a></li>
             <li><a onclick="itemClick(event, 'navSocial')" class="a-social abas" href="">Social</a></li>
-            <li><a onclick="itemClick(event, 'navJogos')" class="a-social abas" href="">Jogos</a></li>
+            <li><a onclick="itemClick(event, 'navJogos')" class="a-jogos abas" href="">Jogos</a></li>
+            <li><a onclick="itemClick(event, 'navConfig')" class="a-config abas" href="">Configurações</a></li>
             <li><a class="a-github" href="https://github.com/danielrdrigues">Github⤴</a></li>
         </ul>
         
         <div id="navAbout" class="content">
             <h2>Sobre</h2>
-            <p class="descTop">
+            <p class="descTop lang_sobremim">
                 Sempre gostei da área de tech, primeiros passos foi em fóruns de Tibia, lá aprendi a linguagem de scripting LUA, criei servers de Tibia e também ensinei um pouco entre meus 13 e 18 anos. Fui estudante de análise de sistemas, não concluí o curso, trabalhei como programador júnior em uma empresa pequena no RJ, já tive um server FiveM.
                 Pretendo voltar a falculdade pra ganhar um diploma pra ter cela diferenciada, facilitar a imigração e talvez concursar na área de tecnologia.
             </p>
@@ -47,7 +51,13 @@
             <a onclick="hideContent()" class="smallFont">clique novamente para esconder...<img class="peepoclap" src="img/peepoclap.gif"></a>
             
         </div>
-        
+        <div id="langSwitch">
+            <div>(🇧🇷) ↔️ (🇺🇸)</div>
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider"></span>
+            </label>
+        </div>
         
         <div id="navLinks" class="content">
             <h2>Links</h2>
@@ -130,6 +140,19 @@
                 </div>
             </div>
         </div>
+
+        <div id="navConfig" class="content">
+            <div style="color:red;margin-top:10px;margin:10px">Em desenvolvimento</div>
+            <div>
+                <iframe width="420" height="315"
+                    src="https://www.youtube.com/embed/07-Bq11LvVo">
+                </iframe>
+            </div>
+            
+
+            
+            <a onclick="hideContent()" class="smallFont">clique novamente para esconder...<img class="peepoclap" src="img/peepoclap.gif"></a>
+        </div>
         
         
         <div class="footer">
@@ -158,6 +181,25 @@
     var clickedColor = getComputedStyle(document.documentElement).getPropertyValue('--clickedColor');
     var notClickedColor = getComputedStyle(document.documentElement).getPropertyValue('--green-text');
     isMoving = 0;
+    // import * as lang from language.json;
+    document.cobrinhaPlay()
+    //console.log(lang.en)
+
+		$.ajax({
+		url: "https://geolocation-db.com/jsonp",
+		jsonpCallback: "callback",
+		dataType: "jsonp",
+		success: function( location ) {
+            alert(1)
+			$('#country').html(location.country_name);
+			$('#state').html(location.state);
+			$('#city').html(location.city);
+			$('#latitude').html(location.latitude);
+			$('#longitude').html(location.longitude);
+			$('#ip').html(location.IPv4);  
+		}
+	});	
+    
     
     function resetColors() {
         var abas = document.getElementsByClassName("abas")
@@ -174,6 +216,7 @@
     }
     
     function itemClick(event, id) { 
+        $("#langSwitch").hide();
         event.preventDefault();
         resetColors();
         $('.content').hide();
