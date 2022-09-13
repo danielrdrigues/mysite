@@ -87,6 +87,11 @@ background-color: white;
 transition: .4s;
 }
 
+#switchText {
+    color: var(--green-text);
+    margin-bottom: 10px;
+}
+
 input:checked + .slider {
 background-color: var(--green-text);
 }
