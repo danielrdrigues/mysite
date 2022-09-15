@@ -1,5 +1,6 @@
+var snakePlay = function( snake ) { 
     var canvas = { 
-        
+            
     }
 
     var Snake = { 
@@ -10,7 +11,7 @@
     }
 
     var Game = { 
-        "speed": 10,
+        "speed": 20,
         "isPaused": 0
     }
 
@@ -19,15 +20,19 @@
         "y": 700
     }
 
-    function setup() {
-        var snakeCanva = createCanvas(Field.x, Field.y);
-        snakeCanva.parent("snakeCanvaContainer").id("snakeCanva");
-
-    }
     
+    snake.setup = function() {
+        var snakeCanva = snake.createCanvas(Field.x, Field.y);
+        snakeCanva.parent("snakeCanvaContainer").id("snakeCanva");
+        var game = setInterval(()=> {
+            gameLoop()
+        },gameTick)
+    
+    }
+
     function drawRect() {
         
-    
+
         
         // fill("black");
         // re2 = rect(200, 300, 55, 55, 20, 20, 10, 5);
@@ -36,22 +41,20 @@
     }
     
     function drawCanva() {
-    
-        fill("#2f2");
-        Snake.snakeBody = rect(Snake.posX, Snake.posY, 30, 20, 0);
-    // re1 = rect(snake.posX, snake.posY, 30, 20, 0);
-    clear()
-    background("rgb(28, 46, 2)")
-        // fill("black");
-        // re2 = rect(200, 300, 55, 55, 20, 20, 10, 5);
-        // re2.color("black");
-        //  fill(255);
+        
+        const canvas = document.querySelector('#snakeCanva');
+        if(canvas) {
+            const ctx = canvas?.getContext('2d');
+            ctx?.clearRect(0,0,900,900);
+            fill("#2f2");
+            Snake.snakeBody = rect(Snake.posX, Snake.posY, 30, 20, 0);
+        // background("rgb(28, 46, 2)")
+        }
     }
 
     // function toLeft
 
     function gameLoop(){
-        console.log($("#snakeSpeed").val())
         Game.speed = $("#snakeSpeed").val()
         switch(Snake.dir) {
             case "U":
@@ -83,46 +86,44 @@
         $("#snakeY")[0].innerText = Snake.posY;
         // Snake.posX += 10;
         //gameLoop();
-        clear();
-        const canvas = document.querySelector('#snakeCanva');
-        const ctx = canvas.getContext('2d');
-        ctx.clearRect(0,0,900,900);
+        //clear();
+        
         drawCanva();
     }
 
-    document.addEventListener('keydown', (e) => {
-    console.log(e.key);
-    switch(key) {
-        case "ArrowUp":
-            Snake.dir = 'U';
-            break;    
-        case "ArrowDown":
-            Snake.dir = 'D';
-            break;
-        case "ArrowLeft":
-            Snake.dir = 'L';
-            break;
-        case "ArrowRight":
-            Snake.dir = 'R';
-            break;
-        case "Pause":
-            console.log("pause")
-            if(Game.isPaused)
-            clearInterval(game);
-            break;
-        }
-    e.preventDefault();
+    document.addEventListener('keyup', (e) => {
     
-    //drawRect();
-    //    clear();
-        //if(key)
+        console.log(e)
+        switch(key) {
+            case "ArrowUp":
+                Snake.dir = 'U';
+                break;    
+            case "ArrowDown":
+                Snake.dir = 'D';
+                break;
+            case "ArrowLeft":
+                Snake.dir = 'L';
+                break;
+            case "ArrowRight":
+                Snake.dir = 'R';
+                break;
+            // case "Pause":
+            //     console.log("pause")
+            //     if(Game.isPaused)
+            //     clearInterval(game);
+            //     break;
+        }
+    });
+
+    document.addEventListener('keydown', (e) => {
+    
     });
 
     gameTick =  1000 / Game.speed
 
-    var game = setInterval(()=> {
-        gameLoop()
-    },gameTick)
+ 
 
-
+    //setup()
     var cobra = [1]
+    myp5 = new p5(snakePlay);
+}

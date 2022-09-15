@@ -13,10 +13,35 @@
     <meta property="og:image:height" content="350">
     <meta property="og:description" content="Site pessoal de DanielRodrigu.es, gambiarras, portfólio, redes...">
     <title>Daniel Rodrigues</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous"></script>
     <script src="scripts/index.js"></script>
     <script src="scripts/cobrinha.js"></script>
-    
+    <script src="scripts/clippy.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/clippy.css" media="all">
+    <script type="text/javascript">
+        clippy.load('Clippy', function(agent){
+            console.log(agent)
+            // do anything with the loaded agent
+            agent.moveTo(1400, 200);
+            agent.show();
+            agent.speak("Hello World! Daniel R. Welcomes you to his page, to kill me just press [DELETE], I'm clippy.js")
+            document.addEventListener('keydown', (e) => {
+                console.log(e.key)
+                if(e.key == "Delete")
+                    agent.hide();
+                if(e.key == 's')
+                    agent.speak('When all else fails, bind some paper together. My name is Clippy.');
+                if(e.key == "a")
+                    agent.animate();
+               // console.log("Oi")
+                });
+            
+        });
+       
+    </script>
     <link rel="shortcut icon" href="favicon.ico">
 </head>
 <link href="styles/index.css" rel="stylesheet">
@@ -48,7 +73,7 @@
                 Pretendo voltar a falculdade pra ganhar um diploma pra ter cela diferenciada, facilitar a imigração e talvez concursar na área de tecnologia.
             </p>
             <br>
-            <a onclick="hideContent()" class="smallFont">clique novamente para esconder...<img class="peepoclap" src="img/peepoclap.gif"></a>
+            <a onclick="hideContent()" href="#" class="smallFont">clique novamente para esconder...<img class="peepoclap" src="img/peepoclap.gif"></a>
             
         </div>
         <div id="langSwitch">
@@ -87,7 +112,7 @@
                 
             </p>
             <br>
-            <a onclick="hideContent()" class="smallFont">clique novamente para esconder...<img class="peepoclap" src="img/peepoclap.gif"></a>
+            <a onclick="hideContent()" href="#" class="smallFont">clique novamente para esconder...<img class="peepoclap" src="img/peepoclap.gif"></a>
             
         </div>
         
@@ -101,7 +126,7 @@
                 Open-source também, vide: <a href="/mysaitehttps://github.com/danielrdrigues/mysaite/tree/master">https://github.com/danielrdrigues/mysaite</a>
             </p>
             <br>
-            <a onclick="hideContent()" class="smallFont">clique novamente para esconder...<img class="peepoclap" src="img/peepoclap.gif"></a>
+            <a onclick="hideContent()" href="#" class="smallFont">clique novamente para esconder...<img class="peepoclap" src="img/peepoclap.gif"></a>
             
         </div>
         
@@ -110,7 +135,7 @@
             <p>Uma seleção de canais fodas do youtube que você pode seguir para aprender mais, cada vez que o site é carregado a ordem de aparição muda</p><br><br>
             <div id="youtube-nav"></div>
             
-            <a onclick="hideContent()" class="smallFont">clique novamente para esconder...<img class="peepoclap" src="img/peepoclap.gif"></a>
+            <a onclick="hideContent()" href="#" class="smallFont">clique novamente para esconder...<img class="peepoclap" src="img/peepoclap.gif"></a>
             
         </div>
         
@@ -125,7 +150,7 @@
                 </ul>
             </div> 
             
-            <a onclick="hideContent()" class="smallFont">clique novamente para esconder...<img class="peepoclap" src="img/peepoclap.gif"></a>
+            <a onclick="hideContent()" href="#" class="smallFont">clique novamente para esconder...<img class="peepoclap" src="img/peepoclap.gif"></a>
         </div>
         
         <div id="navJogos" class="content indexContent">
@@ -151,7 +176,7 @@
             
 
             
-            <a onclick="hideContent()" class="smallFont">clique novamente para esconder...<img class="peepoclap" src="img/peepoclap.gif"></a>
+            <a onclick="hideContent()" href="#" class="smallFont">clique novamente para esconder...<img class="peepoclap" src="img/peepoclap.gif"></a>
         </div>
         
         
@@ -182,7 +207,7 @@
     var notClickedColor = getComputedStyle(document.documentElement).getPropertyValue('--green-text');
     isMoving = 0;
     // import * as lang from language.json;
-    document.cobrinhaPlay()
+    //document.cobrinhaPlay()
     //console.log(lang.en)
 
 		$.ajax({
@@ -190,7 +215,7 @@
 		jsonpCallback: "callback",
 		dataType: "jsonp",
 		success: function( location ) {
-            alert(1)
+            console.log(location)
 			$('#country').html(location.country_name);
 			$('#state').html(location.state);
 			$('#city').html(location.city);
@@ -224,5 +249,6 @@
         event.target.style.color = clickedColor;
     }
 </script>
-<script src="https://cdn.jsdelivr.net/npm/p5@1.4.2/lib/p5.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/p5@1.4.2/lib/p5.js">
+</script>
 </html>
