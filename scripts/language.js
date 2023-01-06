@@ -1,4 +1,5 @@
-{
+// replace lang according to user location
+lang = {
     "EN": { 
         "Sobre": "About",
         "links": "Links",
@@ -47,5 +48,27 @@
         "": "",
         "": "",
         "": ""
-    }
+    },
 }
+
+
+    console.log("language.js loaded")
+    langs = lang
+   
+    document.changeLanguage = function(acr) { 
+        resetBody();
+        if(acr == '?') {
+            var aux = window.localStorage.getItem('selectedLang')
+            if (aux == "PT") 
+                acr = "EN"
+            else 
+                acr = "PT"
+        }
+        console.log("changeLanguage to "+acr)
+        Object.entries(langs[acr]).forEach((k, v) => {
+            if(k[0] && k[1])
+            document.body.innerHTML = document.body.innerHTML.replaceAll("lang_"+k[0], k[1]);
+        });
+        window.localStorage.setItem("selectedLang", acr)
+        langSwitchInput.checked = (aux == "PT");
+    }  

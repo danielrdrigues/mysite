@@ -1,3 +1,4 @@
+//import changeLanguage from '../scripts/language.js'
 var youtubeCreators = { 
     "1": {
         "name": "Universo Programado (🇧🇷)",
@@ -76,13 +77,18 @@ var youtubeCreators = {
         "link": "https://www.youtube.com/results?search_query=fireship",
         "img": "img/youtube/fireship.jpg",
         "desc": "Tutoriais geralmente resumidos de programação e showcase de linguagens e ferramentas"
+    },
+    "14": {
+        "name": "PwnFunction (us)",
+        "link": "https://www.youtube.com/results?search_query=pwnfunction",
+        "img": "img/youtube/pwnfunction.jpg",
+        "desc": "Videos de hacking e conceitos de computação"
     }
 }
 
-
 window.originalBody = `<body><div id="body-container">   
+<div id="browserwarning">this website is under development and may not work in your browser, please use chrome for better experience.</div>
 <img id="sapin" style="width:200px" src="img/peepopoop.png">
-
 <h1>Daniel R;</h1>
 <p class="lang_bemvindo">lang_bemvindo</p><a class="a-github" href="https://github.com/danielrdrigues/mysaite">github</a>
 <ul id="nav">
@@ -228,7 +234,6 @@ window.originalBody = `<body><div id="body-container">
 
 
 
-
 var creators = []
 
 for(i=1; i<=Object.keys(youtubeCreators).length; i++){
@@ -267,7 +272,5 @@ for (i=1; i<=Object.keys(youtubeCreators).length; i++) {
 
 $(document).ready(function() { 
     resetBody();
-    
-    document.changeLanguage("PT")
-    
+    document.changeLanguage("PT");
 });
