@@ -95,7 +95,7 @@ window.originalBody = `<body><div id="body-container">
     <!-- <li><a class="a-sktcity" href="https://www.sktcity.com.br">SKT⤴</a></li> -->
     <li><a onclick="itemClick(event, 'navAbout')" class="a-about abas" href="">lang_Sobre</a></li>
     <li><a onclick="itemClick(event, 'navLinks')" class="a-links abas"  href="">Links</a></li>
-    <li><a onclick="itemClick(event, 'navSite')" class="a-site abas"  href="">Site</a></li>
+    <li style="display:none"><a onclick="itemClick(event, 'navSite')" class="a-site abas"  href="">Site</a></li>
     <li><a onclick="itemClick(event, 'navYoutube')" class="a-youtube abas"  href="">Youtube</a></li>
     <li><a onclick="itemClick(event, 'navSocial')" class="a-social abas" href="">Social</a></li>
     <li><a onclick="itemClick(event, 'navJogos')" class="a-jogos abas" href="">lang_jogos</a></li>
