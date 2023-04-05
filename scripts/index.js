@@ -88,7 +88,7 @@ var youtubeCreators = {
 
 window.originalBody = `<body><div id="body-container">   
 <div id="browserwarning">this website is under development and may not work in your browser, please use chrome for better experience.</div>
-<a href="tools.html"><img id="sapin" style="width:200px" src="img/peepopoop.png"></a>
+<a href="tools.html"><img id="sapin" style="width:200px" src="img/peeposunglass.png"></a>
 <h1>Daniel R;</h1>
 <p class="lang_bemvindo">lang_bemvindo</p><a class="a-github" href="https://github.com/danielrdrigues/mysaite">github</a>
 <ul id="nav">
