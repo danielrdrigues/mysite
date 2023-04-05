@@ -88,7 +88,7 @@ var youtubeCreators = {
 
 window.originalBody = `<body><div id="body-container">   
 <div id="browserwarning">this website is under development and may not work in your browser, please use chrome for better experience.</div>
-<img id="sapin" style="width:200px" src="img/peepopoop.png">
+<a href="tools.html"><img id="sapin" style="width:200px" src="img/peepopoop.png"></a>
 <h1>Daniel R;</h1>
 <p class="lang_bemvindo">lang_bemvindo</p><a class="a-github" href="https://github.com/danielrdrigues/mysaite">github</a>
 <ul id="nav">
@@ -257,7 +257,7 @@ function shuffle(array) {
 
 window.resetBody = function() {
     document.body.innerHTML = originalBody
-    document.body.innerHTML = document.body.innerHTML.replaceAll("PeppohideButton",`<a onclick="hideContent()" href="#" class="smallFont">clique novamente para esconder...<img class="peepoclap" src="img/peepoclap.gif"></a>`)
+    document.body.innerHTML = document.body.innerHTML.replaceAll("PeppohideButton",`<a onclick="hideContent()" href="#" class="smallFont">lang_clickagain<img class="peepoclap" src="img/peepoclap.gif"></a>`)
 for (i=1; i<=Object.keys(youtubeCreators).length; i++) {
         index = creators[i-1]
         $("document").css("background-color", "white");

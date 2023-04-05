@@ -7,7 +7,9 @@
     --sCanvaWidth: 900px;
 }
 
-body {cursor: url(mouse.cur),auto;}
+body {cursor: url(cursors/normal.cur),auto;}
+
+a , input, span, .slider, .switch, label {cursor: url(cursors/mouse.cur),auto;}
 
 red {
     color: red;

@@ -20,7 +20,8 @@ lang = {
         "yt_gabrielPato": "Talks about hacking and tech, there's tecnical part, but is to mainstream.",
         "yt_peixeBabel": "About tech and AI, great channel",
         "yt_programacaoDin": "couple of devs, great devs and students, AI and DataScience",
-        "jogos_desenvolvimento": "(WiP) Trying to learn more about Canva and how it works 😪"
+        "jogos_desenvolvimento": "(WiP) Trying to learn more about Canva and how it works 😪",
+        "clickagain": "click here to hide..."
 
     },
     "PT": { 
@@ -43,11 +44,7 @@ lang = {
         "yt_peixeBabel": "Sobre Tecnologia e IA, ótimo canal.",
         "yt_programacaoDin": "Canal de casal de programadores, ótimos programadores e estudantes, IA e DataScience",
         "jogos_desenvolvimento": "(WiP) Tentando aprender mais sobre Canva e como funciona 😪",
-        "": "",
-        "": "",
-        "": "",
-        "": "",
-        "": ""
+        "clickagain": "clique aqui para esconder..."
     },
 }
 
