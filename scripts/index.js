@@ -98,8 +98,8 @@ window.originalBody = `<body><div id="body-container">
     <li style="display:none"><a onclick="itemClick(event, 'navSite')" class="a-site abas"  href="">Site</a></li>
     <li><a onclick="itemClick(event, 'navYoutube')" class="a-youtube abas"  href="">Youtube</a></li>
     <li><a onclick="itemClick(event, 'navSocial')" class="a-social abas" href="">Social</a></li>
-    <li><a onclick="itemClick(event, 'navJogos')" class="a-jogos abas" href="">lang_jogos</a></li>
-    <li><a onclick="itemClick(event, 'navConfig')" class="a-config abas" href="">lang_config</a></li>
+    <li style="display:none"><a onclick="itemClick(event, 'navJogos')" class="a-jogos abas" href="">lang_jogos</a></li>
+    <li style="display:none"><a onclick="itemClick(event, 'navConfig')" class="a-config abas" href="">lang_config</a></li>
     <li><a class="a-github" href="https://github.com/danielrdrigues">Github⤴</a></li>
 </ul>
 

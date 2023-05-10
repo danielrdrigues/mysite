@@ -159,6 +159,7 @@ a { color: var(--green-text) }
     background-color: var(--lighter-bg);
     padding: 5px;
     margin: 5px;
+    border:#2f2 dashed;
   
     padding: 2vw;
 }
