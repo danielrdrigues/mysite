@@ -11,8 +11,8 @@ function App() {
         <li>
           <ul><a href="https://github.com/danielrdrigues" target="blank" rel="mysaite">Github</a></ul>
           <ul><a href="https://www.linkedin.com/in/danielrdrigues/" target="blank" rel="mysaite">Linkedin</a></ul>
-          <ul><a href="mailto:drdriguesd@gmail.com">Enviar e-mail</a></ul>
-          <ul><a href="" target="blank" rel="mysaite"></a></ul>
+          <ul><a href="mailto:drdriguesd@gmail.com">Mail</a></ul>
+          <ul><a href="https://t.me/Danielrdrigues" target="blank" rel="mysaite">Telegram</a></ul>
         </li>
       </header>
     </div>
