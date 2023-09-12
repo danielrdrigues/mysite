@@ -6,7 +6,7 @@ function App() {
     <div className={styles.App}>
       <header className={styles.header}>
        <h1>Daniel Rodrigues</h1>
-        <div id="desc">Welcome to my homepage! My goal with this website is to add and test features and resources, experiment with junk-code and explore new tech. This old-school aesthetic is intentional, just because I find it cool. Eventually, new features will be added. You can find the front-end code on my GitHub page.</div>
+        <div id="desc">Welcome to my homepage! here's some of my links.</div>
         <br />
         <li>
           <ul><a href="https://github.com/danielrdrigues" target="blank" rel="mysaite">Github</a></ul>
